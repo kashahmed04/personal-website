@@ -5,6 +5,7 @@ import Hero from "./components/home/Hero";
 //fix X on hamburger menu
 //fix rsponsiveness and design on homepage as well as moving text in the middle
 //for different screen sizes and not off the design
+//fix fonts and spacing 
 function App() {
   return (
     <>
