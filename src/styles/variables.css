@@ -9,7 +9,7 @@
 
   /*layout*/
   --page-padding: clamp(1.25rem, 4vw, 4rem);
-  --content-max-width: 1600px;
+  --content-max-width: 100%;
 
   /*transitions*/
   --transition-fast: 180ms ease;

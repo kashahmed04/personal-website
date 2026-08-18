@@ -1,0 +1,63 @@
+.distort-field {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  opacity: 1;
+}
+
+.distort-field canvas {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1201px) {
+  .distort-field {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .distort-field {
+    opacity: 0.95;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .distort-field {
+    opacity: 0.9;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .distort-field {
+    opacity: 0.85;
+  }
+}
+
+
+@media (max-width: 430px) {
+  .distort-field {
+    opacity: 0.8;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .distort-field {
+    display: none;
+  }
+}
