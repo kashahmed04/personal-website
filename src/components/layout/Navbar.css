@@ -1,18 +1,28 @@
 .navbar {
-  position: relative;
-  z-index: 100;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   width: 100%;
+
   padding: 1.75rem var(--page-padding);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  background: rgba(10, 10, 10, 0.88);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar__logo {
+  font-family: "Inter Tight", "Inter", Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.04em;
 }
 
@@ -30,9 +40,12 @@
   position: relative;
 
   color: var(--color-text-muted);
+
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
+
   text-transform: uppercase;
 
   transition: color var(--transition-fast);
@@ -116,7 +129,6 @@
 
 @media (max-width: 700px) {
   .navbar {
-    position: relative;
     padding: 1.25rem var(--page-padding);
   }
 
@@ -166,7 +178,6 @@
     font-size: 1rem;
     letter-spacing: 0.06em;
   }
-
 }
 
 @media (hover: hover) and (pointer: fine) {

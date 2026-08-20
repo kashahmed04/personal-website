@@ -23,11 +23,11 @@ function ProjectCard({
                         {title}
                     </h3>
 
-                    <p className="project-card__category">
+                    <p className="project-card__category text-label">
                         {category}
                     </p>
 
-                    <p className="project-card__description">
+                    <p className="project-card__description text-body">
                         {description}
                     </p>
 

@@ -104,6 +104,7 @@
     text-transform: uppercase;
 }
 
+
 .project-card__link {
     width: fit-content;
 
@@ -123,6 +124,11 @@
     transition:
         color var(--transition-fast),
         transform var(--transition-fast);
+}
+
+.project-card__tools,
+.project-card__link {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 .project-card__link:hover,

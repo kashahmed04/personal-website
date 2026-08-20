@@ -20,3 +20,21 @@ h4,
 p {
   margin: 0;
 }
+
+.text-label {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.text-body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+}

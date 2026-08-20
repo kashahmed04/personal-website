@@ -31,7 +31,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero" id="top">
       <DistortField />
 
       <div className="hero__content">

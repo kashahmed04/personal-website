@@ -1,0 +1,91 @@
+.connect {
+    min-width: 0;
+}
+
+.connect__eyebrow {
+    display: block;
+
+    color: var(--color-accent);
+
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+.connect__description {
+    max-width: 32ch;
+
+    margin-top: 1.5rem;
+
+    color: var(--color-text-muted);
+
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    line-height: 1.7;
+}
+
+.connect__links {
+    margin-top: 1.75rem;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: clamp(2rem, 5vw, 3.5rem);
+}
+
+.connect__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.7rem;
+
+    min-width: 60px;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.connect__link:hover,
+.connect__link:focus-visible {
+    color: var(--color-accent);
+
+    transform: translateY(-2px);
+}
+
+.connect__icon {
+    color: var(--color-text);
+
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.connect__link span:last-child {
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.74rem;
+    font-weight: 500;
+}
+
+/*mobile*/
+@media (max-width: 700px) {
+    .connect__links {
+        gap: 2rem;
+    }
+}
+
+/*small mobile*/
+@media (max-width: 430px) {
+    .connect__links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        gap: 1.5rem 2.25rem;
+    }
+}
