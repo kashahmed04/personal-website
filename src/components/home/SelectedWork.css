@@ -1,0 +1,66 @@
+.selected-work {
+  width: 100%;
+
+  padding:
+    clamp(5rem, 8vw, 8rem)
+    var(--page-padding)
+    0;
+
+  background: var(--color-bg);
+
+  scroll-margin-top: 85px;
+}
+
+.selected-work__header {
+  width: 100%;
+
+  padding-bottom: clamp(2.5rem, 4vw, 4rem);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.75rem;
+}
+
+.selected-work__title {
+  font-family: "Inter Tight", "Inter", Arial, Helvetica, sans-serif;
+
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: 900;
+
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+
+  text-transform: uppercase;
+}
+
+.selected-work__projects {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .selected-work {
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .selected-work {
+    padding-top: 4rem;
+    scroll-margin-top: 70px;
+  }
+
+  .selected-work__header {
+    padding-bottom: 2.5rem;
+  }
+
+  .selected-work__title {
+    font-size: clamp(2.75rem, 14vw, 5rem);
+  }
+}
+
+@media (max-width: 430px) {
+  .selected-work {
+    padding-top: 3.5rem;
+  }
+}
