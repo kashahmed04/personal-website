@@ -42,6 +42,7 @@ import Footer from "./components/layout/Footer.jsx";
 //should we include github in contact section or no because it is not technically a contact
 //fix top hero animation to fit with text with enough vertical space regardless of screen size
 //fix title on resume to be more detailed for what I do (same with LinkedIn) and make both detailed
+//fix links to different pages and page locations (to not show #) (and fix animation to go back to top of home page for initials)
 function HomePage() {
   return (
     <>
