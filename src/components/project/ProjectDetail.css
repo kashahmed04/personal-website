@@ -1,3 +1,44 @@
+/*typography*/
+.project-detail__summary,
+.project-detail__meta p,
+.project-detail__links,
+.project-section__description,
+.project-section__list,
+.project-takeaways__list {
+    font-family:
+        "Inter",
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.project-detail__back,
+.project-detail__subtitle,
+.project-detail__button,
+.project-detail__label,
+.project-detail__tag,
+.project-result__label,
+.project-detail__previous > span,
+.project-detail__next > span,
+.project-placeholder {
+    font-family:
+        "Inter",
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.project-detail__navigation strong {
+    font-family:
+        "Inter Tight",
+        "Inter",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-weight: 700;
+}
+
 /*project detail*/
 .project-detail {
     width: 100%;
@@ -514,8 +555,8 @@
     text-align: right;
 }
 
-.project-detail__previous > span,
-.project-detail__next > span {
+.project-detail__previous>span,
+.project-detail__next>span {
     color: var(--color-accent);
 
     font-size: 0.65rem;
@@ -530,18 +571,17 @@
     font-size: 1rem;
 }
 
-.project-detail__nav-star {
+.project-detail__nav-marker {
     justify-self: center;
 
-    color: var(--color-accent);
+    width: 0.75rem;
+    height: 0.75rem;
 
-    font-size: 2rem;
-    line-height: 1;
+    background: var(--color-accent);
 
     user-select: none;
     pointer-events: none;
 }
-
 
 /*laptop*/
 @media (max-width: 1100px) {
@@ -717,7 +757,7 @@
         text-align: left;
     }
 
-    .project-detail__nav-star {
+    .project-detail__nav-marker {
         grid-column: 2;
         grid-row: 1;
 

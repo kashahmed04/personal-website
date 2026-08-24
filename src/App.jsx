@@ -12,7 +12,8 @@ import PlatinumCarwashPage from "./pages/PlatinumCarwashPage.jsx";
 import WatchlistMakerPage from "./pages/WatchlistMakerPage.jsx";
 import SonicHangmanPage from "./pages/SonicHangmanPage.jsx";
 
-import AboutPreview from "./components/home/AboutPreview.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+
 import Footer from "./components/layout/Footer.jsx";
 
 //CONFIRM FONTS THEN DOWNLOAD THEM INSTEAD OF PULLING FROM GOOGLE (EX. IN TYPOGRAPHY.CSS)
@@ -43,12 +44,25 @@ import Footer from "./components/layout/Footer.jsx";
 //fix top hero animation to fit with text with enough vertical space regardless of screen size
 //fix title on resume to be more detailed for what I do (same with LinkedIn) and make both detailed
 //fix links to different pages and page locations (to not show #) (and fix animation to go back to top of home page for initials)
+//add creative technologist on resume and linkedin and everywhere else
+//make sure starting page is just / and not going to other parts of the page like selected site when server is restarted (defaults to selected work 
+//when page reloads or changes are made or server is restarted)
+//the footer at around 600px the "conversation" word goes onto a different line so be sure to make sure it is on the same line
+//fix coloring of things on the footer (gray text look out of place)
+//make sure the footer is responsive and looks good on all screen sizes and devices
+//add experience section when I get more experience on about me section
+//make lines on footer follow page lines like full lines on full page and not full lines as screen size gets smaller (same for all page aspects)
+//TIGHTEN VERTICAL SPACING AND ALL SPACING ACROSS SITE
+//MAKE SURE THERE IS NO REPETITIVE CODE OR ANYTHING ON SITE CONTENT AND EVERYTHING IS IN RIGHT ORDER
+//ON CODE AND SITE CONTENT 
+//make sure footer looks fine with all content on site 
+//add projects on tabs for all screen types on menu 
+//make sure all imports and exports are the same and consistent across all files and components
 function HomePage() {
   return (
     <>
       <Hero />
       <SelectedWork />
-      <AboutPreview />
     </>
   );
 }
@@ -85,6 +99,11 @@ function App() {
           <Route
             path="/projects/sonic-hangman"
             element={<SonicHangmanPage />}
+          />
+
+          <Route
+            path="/about"
+            element={<AboutPage />}
           />
         </Routes>
       </main>

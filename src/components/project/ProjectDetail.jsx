@@ -313,11 +313,9 @@ function ProjectDetail({ project }) {
                 )}
 
                 <span
-                    className="project-detail__nav-star"
+                    className="project-detail__nav-marker"
                     aria-hidden="true"
-                >
-                    ★
-                </span>
+                />
 
                 {project.nextProject ? (
                     <Link
