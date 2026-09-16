@@ -131,8 +131,8 @@
   font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
-.project-card__link:hover,
-.project-card__link:focus-visible {
+.project-card:hover .project-card__link,
+.project-card:focus-visible .project-card__link {
     color: var(--color-accent);
 
     transform: translateX(0.25rem);
@@ -166,7 +166,7 @@
 }
 
 .project-card:hover .project-card__image {
-    transform: scale(1.02);
+    transform: scale(1.015);
 }
 
 /*medium desktop*/

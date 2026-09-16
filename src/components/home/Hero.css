@@ -96,10 +96,9 @@
   color: var(--color-text);
 
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 
   transition:
@@ -110,7 +109,7 @@
 .hero__scroll span:first-child {
   color: var(--color-accent);
 
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .hero__scroll:hover,

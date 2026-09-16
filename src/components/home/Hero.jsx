@@ -46,11 +46,10 @@ function Hero() {
           </span>
 
           <span
-            className={`hero__statement-word ${
-              isChanging
-                ? "hero__statement-word--changing"
-                : ""
-            }`}
+            className={`hero__statement-word ${isChanging
+              ? "hero__statement-word--changing"
+              : ""
+              }`}
           >
             {words[wordIndex]}
           </span>
@@ -66,7 +65,7 @@ function Hero() {
           href="#selected-work"
         >
           <span aria-hidden="true">↓</span>
-          <span>Scroll to explore</span>
+          <span>View Projects</span>
         </a>
       </div>
     </section>

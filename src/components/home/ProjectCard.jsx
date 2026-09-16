@@ -12,7 +12,11 @@ function ProjectCard({
     link = "#",
 }) {
     return (
-        <article className="project-card">
+        <Link
+            to={link}
+            className="project-card"
+            aria-label={`View ${title} project`}
+        >
             <div className="project-card__info">
                 <span className="project-card__number">
                     {number}
@@ -35,13 +39,9 @@ function ProjectCard({
                         {tools}
                     </p>
 
-                    <Link
-                        to={link}
-                        className="project-card__link"
-                    >
+                    <span className="project-card__link">
                         View Project ↗
-                    </Link>
-
+                    </span>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@ function ProjectCard({
                     className="project-card__image"
                 />
             </div>
-        </article>
+        </Link>
     );
 }
 

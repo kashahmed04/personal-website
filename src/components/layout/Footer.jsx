@@ -15,7 +15,7 @@ function Footer() {
 
       <div className="footer__contact">
         <a
-          href="#"
+          href="https://www.linkedin.com/in/kashaf-ahmed-dev"
           className="footer__contact-link"
           target="_blank"
           rel="noreferrer"
@@ -29,9 +29,8 @@ function Footer() {
 
           <span>LinkedIn</span>
         </a>
-
         <a
-          href="mailto:your@email.com"
+          href="mailto:kash.ahmed84@gmail.com"
           className="footer__contact-link"
         >
           <span
@@ -47,7 +46,7 @@ function Footer() {
 
       <div className="footer__meta">
         <a
-          href="#"
+          href="https://github.com/kashahmed04/personal-website"
           className="footer__source"
           target="_blank"
           rel="noreferrer"

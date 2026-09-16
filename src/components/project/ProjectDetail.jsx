@@ -37,6 +37,8 @@ function ProjectDetail({ project }) {
                                 <a
                                     href={project.primaryAction.href}
                                     className="project-detail__button project-detail__button--primary"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     {project.primaryAction.label} ↗
                                 </a>
@@ -46,17 +48,26 @@ function ProjectDetail({ project }) {
                                 <a
                                     href={project.secondaryAction.href}
                                     className="project-detail__button project-detail__button--secondary"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
-                                    {project.secondaryAction.label} →
+                                    {project.secondaryAction.label} ↗
                                 </a>
                             )}
                         </div>
                     </div>
 
                     <div className="project-detail__hero-visual">
-                        <div className="project-placeholder">
-                            <span>Project Hero Image</span>
-                        </div>
+                        {project.heroImage ? (
+                            <img
+                                src={project.heroImage}
+                                alt={`${project.title} project`}
+                            />
+                        ) : (
+                            <div className="project-placeholder">
+                                <span>Project Hero Image</span>
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>
@@ -94,26 +105,9 @@ function ProjectDetail({ project }) {
                     <p>{project.timeline}</p>
                 </div>
 
-                <div className="project-detail__meta-item">
-                    <span className="project-detail__label">
-                        Links
-                    </span>
-
-                    <div className="project-detail__links">
-                        {project.links.map((link) => (
-                            <a
-                                key={link.label}
-                                href={link.href}
-                            >
-                                {link.label} ↗
-                            </a>
-                        ))}
-                    </div>
-                </div>
-
                 <div className="project-detail__meta-item project-detail__meta-item--technologies">
                     <span className="project-detail__label">
-                        Technologies
+                        Tools & Technologies
                     </span>
 
                     <div className="project-detail__tags">
@@ -147,39 +141,58 @@ function ProjectDetail({ project }) {
                 </div>
 
                 <div className="project-section__visual">
-                    <div className="project-placeholder">
-                        <span>Goals / Research Image</span>
-                    </div>
+                    {project.goal.image ? (
+                        <img
+                            src={project.goal.image}
+                            alt={`${project.title} project process`}
+                        />
+                    ) : (
+                        <div className="project-placeholder">
+                            <span>Goals / Research Image</span>
+                        </div>
+                    )}
                 </div>
             </section>
 
-            {/*brainstorming */}
+            {/*planning */}
 
             <section className="project-section">
                 <div className="project-section__copy">
                     <span className="project-detail__label">
-                        Brainstorming
+                        {project.planning.label}
                     </span>
 
                     <h2 className="project-section__title">
-                        Exploring the idea
+                        {project.planning.title}
                     </h2>
 
                     <p className="project-section__description">
-                        Placeholder copy describing early ideas,
-                        sketches, interaction concepts, research,
-                        and initial design decisions.
+                        {project.planning.description}
                     </p>
                 </div>
 
                 <div className="project-section__gallery project-section__gallery--two">
-                    <div className="project-placeholder">
-                        <span>Brainstorming 01</span>
-                    </div>
+                    {project.planning.images?.[0] ? (
+                        <img
+                            src={project.planning.images[0]}
+                            alt={`${project.title} website audit and research`}
+                        />
+                    ) : (
+                        <div className="project-placeholder">
+                            <span>Research 01</span>
+                        </div>
+                    )}
 
-                    <div className="project-placeholder">
-                        <span>Brainstorming 02</span>
-                    </div>
+                    {project.planning.images?.[1] ? (
+                        <img
+                            src={project.planning.images[1]}
+                            alt={`${project.title} project planning`}
+                        />
+                    ) : (
+                        <div className="project-placeholder">
+                            <span>Planning 02</span>
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -188,23 +201,23 @@ function ProjectDetail({ project }) {
             <section className="project-section">
                 <div className="project-section__copy">
                     <span className="project-detail__label">
-                        Development
+                        {project.development.label}
                     </span>
 
                     <h2 className="project-section__title">
-                        Building the experience
+                        {project.development.title}
                     </h2>
 
                     <p className="project-section__description">
-                        Placeholder copy explaining how the
-                        project moved from concept into a working
-                        product.
+                        {project.development.description}
                     </p>
 
                     <ul className="project-section__list">
-                        <li>Placeholder development detail</li>
-                        <li>Placeholder technical challenge</li>
-                        <li>Placeholder implementation detail</li>
+                        {project.development.details.map((detail, index) => (
+                            <li key={`${detail}-${index}`}>
+                                {detail}
+                            </li>
+                        ))}
                     </ul>
                 </div>
 
@@ -219,21 +232,58 @@ function ProjectDetail({ project }) {
                 </div>
             </section>
 
-            {/*playtesting*/}
+            {/*marketing*/}
+
+            {project.marketing && (
+                <section className="project-section">
+                    <div className="project-section__copy">
+                        <span className="project-detail__label">
+                            {project.marketing.label}
+                        </span>
+
+                        <h2 className="project-section__title">
+                            {project.marketing.title}
+                        </h2>
+
+                        <p className="project-section__description">
+                            {project.marketing.description}
+                        </p>
+
+                        <ul className="project-section__list">
+                            {project.marketing.details.map((detail, index) => (
+                                <li key={`${detail}-${index}`}>
+                                    {detail}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="project-section__gallery project-section__gallery--two">
+                        <div className="project-placeholder">
+                            <span>Marketing 01</span>
+                        </div>
+
+                        <div className="project-placeholder">
+                            <span>Marketing 02</span>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/*testing*/}
 
             <section className="project-section">
                 <div className="project-section__copy">
                     <span className="project-detail__label">
-                        Playtesting & Feedback
+                        {project.testing.label}
                     </span>
 
                     <h2 className="project-section__title">
-                        Testing and refining
+                        {project.testing.title}
                     </h2>
 
                     <p className="project-section__description">
-                        Placeholder content describing testing,
-                        feedback, iteration, and improvements.
+                        {project.testing.description}
                     </p>
                 </div>
 
@@ -253,7 +303,7 @@ function ProjectDetail({ project }) {
                     </span>
 
                     <h2 className="project-section__title">
-                        What came out of it
+                        {project.resultsTitle}
                     </h2>
                 </div>
 

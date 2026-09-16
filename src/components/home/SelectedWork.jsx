@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard.jsx";
+import platinumCarwashHero from "../../assets/images/platinum-wash-project-hero.png";
 import "./SelectedWork.css";
 
 const projects = [
@@ -7,13 +8,12 @@ const projects = [
     title: "Platinum Carwash",
     category: "Web Design & Development",
     description:
-      "A responsive marketing website for a local car wash, designed to clearly present services and create a smooth experience across devices.",
-    tools: "HTML · CSS · JavaScript · GA4",
-    image: "/images/platinum-carwash.jpg",
-    imageAlt: "Platinum Carwash website",
+      "A website and digital presence redesign for a local car wash, combining UI/UX, branding, SEO, and social media.",
+    tools: "HTML · CSS · JavaScript · Google Analytics",
+    image: platinumCarwashHero,
+    imageAlt: "Platinum Carwash website homepage",
     link: "/projects/platinum-carwash",
   },
-
   {
     number: "02",
     title: "Floss Boss",

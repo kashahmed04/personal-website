@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import kashAbout from "../assets/images/kash-about.jpeg";
 import "../styles/typography.css";
 import "./AboutPage.css";
 
@@ -15,9 +17,7 @@ function AboutPage() {
 
         <div className="about-intro__content">
           <div className="about-intro__image">
-            <div className="about-intro__image-placeholder">
-              Portrait Image
-            </div>
+            <img src={kashAbout} alt="Kash Ahmed" />
           </div>
 
           <div className="about-intro__copy">
@@ -26,29 +26,68 @@ function AboutPage() {
             </h1>
 
             <p className="about-intro__lead">
-              I'm an interactive developer focused on building thoughtful,
-              engaging digital experiences through design, development, and
-              interaction.
+              I'm a Creative Technologist who enjoys working across front-end development,
+              UI/UX design, and interactive media.
             </p>
 
             <div className="about-intro__accent"></div>
 
             <p className="text-body">
-              I enjoy turning ideas into clean, intuitive interfaces and
-              interactive projects that connect design, code, and technology.
+              I like bringing different parts of art and technology together to
+              create digital experiences, whether I'm designing, coding, or
+              experimenting with something new.
             </p>
 
             <p className="text-body">
-              I'm especially interested in work that combines strong visual
-              design with meaningful interaction and practical development.
+              I care about making things that work well, look good, and are easy for people to use.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-section about-experience">
+        <div className="about-section__heading">
+          <span className="about-section__number">02</span>
+
+          <span className="about-section__label text-label">
+            Experience
+          </span>
+        </div>
+
+        <div className="about-experience__content">
+          <div className="about-experience__company">
+            <h2 className="about-experience__title">
+              Platinum Car Wash
+            </h2>
+
+            <p className="about-experience__role">
+              Digital Marketing & Web Development Intern
+            </p>
+          </div>
+
+          <p className="about-experience__date">
+            June 2026 - August 2026
+          </p>
+
+          <div className="about-experience__details">
+            <p className="text-body">
+              Designed and developed a responsive website while working across
+              UI/UX, branding, SEO, analytics, and social media.
+            </p>
+
+            <Link
+              to="/projects/platinum-carwash"
+              className="about-experience__link"
+            >
+              View Project ↗
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="about-section about-skills">
         <div className="about-section__heading">
-          <span className="about-section__number">02</span>
+          <span className="about-section__number">03</span>
 
           <span className="about-section__label text-label">
             Skills
@@ -71,9 +110,21 @@ function AboutPage() {
               <li>React</li>
               <li>HTML</li>
               <li>CSS</li>
+              <li>Kotlin</li>
+              <li>C#</li>
+              <li>C++</li>
               <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Handlebars.js</li>
               <li>p5.js</li>
+              <li>PixiJS</li>
+              <li>howler.js</li>
+              <li>A-Frame</li>
+              <li>AR.js</li>
               <li>Three.js</li>
+              <li>MongoDB</li>
+              <li>Mongoose</li>
+              <li>Redis</li>
             </ul>
           </div>
 
@@ -93,8 +144,12 @@ function AboutPage() {
               <li>Wireframing</li>
               <li>User Research</li>
               <li>User Testing</li>
-              <li>Accessibility</li>
+              <li>Accessibility Design</li>
               <li>Design Systems</li>
+              <li>Axure</li>
+              <li>Adobe Illustrator</li>
+              <li>Adobe Photoshop</li>
+              <li>Canva</li>
             </ul>
           </div>
 
@@ -108,14 +163,19 @@ function AboutPage() {
             </h2>
 
             <ul className="about-skills__list">
-              <li>Figma</li>
-              <li>Git / GitHub</li>
+              <li>Git/GitHub</li>
               <li>VS Code</li>
               <li>Arduino</li>
+              <li>Arduino IDE</li>
+              <li>npm</li>
+              <li>Heroku</li>
+              <li>Android Studio</li>
+              <li>Playwright</li>
+              <li>Google Analytics</li>
+              <li>Google Search Console</li>
+              <li>Google Business Profile</li>
+              <li>Twine</li>
               <li>Unity</li>
-              <li>Blender</li>
-              <li>MongoDB</li>
-              <li>Docker</li>
             </ul>
           </div>
         </div>
@@ -123,7 +183,7 @@ function AboutPage() {
 
       <section className="about-section about-personal">
         <div className="about-section__heading">
-          <span className="about-section__number">03</span>
+          <span className="about-section__number">04</span>
 
           <span className="about-section__label text-label">
             A Little More About Me
@@ -131,14 +191,14 @@ function AboutPage() {
         </div>
 
         <p className="about-personal__description text-body">
-          Outside of design and development, I like staying active, exploring
-          creative hobbies, and finding new things to learn.
+          Outside of design and development, I enjoy a mix of active,
+          creative, and laid-back hobbies.
         </p>
 
         <div className="about-personal__grid">
           <div className="about-personal__item">
-            <span className="about-personal__icon">🛹</span>
-            <span>Skateboarding</span>
+            <span className="about-personal__icon">🏎️</span>
+            <span>LEGO Car Builds</span>
           </div>
 
           <div className="about-personal__item">
@@ -157,8 +217,8 @@ function AboutPage() {
           </div>
 
           <div className="about-personal__item">
-            <span className="about-personal__icon">★</span>
-            <span>Anime</span>
+            <span className="about-personal__icon">🌸</span>
+            <span>Anime & K-Dramas</span>
           </div>
         </div>
       </section>
