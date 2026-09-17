@@ -4,7 +4,7 @@ import "./ProjectDetail.css";
 function ProjectDetail({ project }) {
     return (
         <article className="project-detail">
-            {/*project hero */}
+            {/* project hero */}
 
             <section className="project-detail__hero">
                 <Link
@@ -72,7 +72,7 @@ function ProjectDetail({ project }) {
                 </div>
             </section>
 
-            {/*project meta*/}
+            {/* project meta */}
 
             <section className="project-detail__meta">
                 <div className="project-detail__meta-item project-detail__meta-item--overview">
@@ -80,9 +80,7 @@ function ProjectDetail({ project }) {
                         Overview
                     </span>
 
-                    <p>
-                        {project.overview}
-                    </p>
+                    <p>{project.overview}</p>
                 </div>
 
                 <div className="project-detail__meta-item">
@@ -123,231 +121,338 @@ function ProjectDetail({ project }) {
                 </div>
             </section>
 
-            {/*goals*/}
+            {/* case study layout */}
 
-            <section className="project-section">
-                <div className="project-section__copy">
-                    <span className="project-detail__label">
-                        Goals
-                    </span>
+            <div className="project-detail__case-study">
+                {/* sidebar */}
 
-                    <h2 className="project-section__title">
-                        {project.goal.title}
-                    </h2>
-
-                    <p className="project-section__description">
-                        {project.goal.description}
-                    </p>
-                </div>
-
-                <div className="project-section__visual">
-                    {project.goal.image ? (
-                        <img
-                            src={project.goal.image}
-                            alt={`${project.title} project process`}
-                        />
-                    ) : (
-                        <div className="project-placeholder">
-                            <span>Goals / Research Image</span>
-                        </div>
-                    )}
-                </div>
-            </section>
-
-            {/*planning */}
-
-            <section className="project-section">
-                <div className="project-section__copy">
-                    <span className="project-detail__label">
-                        {project.planning.label}
-                    </span>
-
-                    <h2 className="project-section__title">
-                        {project.planning.title}
-                    </h2>
-
-                    <p className="project-section__description">
-                        {project.planning.description}
-                    </p>
-                </div>
-
-                <div className="project-section__gallery project-section__gallery--two">
-                    {project.planning.images?.[0] ? (
-                        <img
-                            src={project.planning.images[0]}
-                            alt={`${project.title} website audit and research`}
-                        />
-                    ) : (
-                        <div className="project-placeholder">
-                            <span>Research 01</span>
-                        </div>
-                    )}
-
-                    {project.planning.images?.[1] ? (
-                        <img
-                            src={project.planning.images[1]}
-                            alt={`${project.title} project planning`}
-                        />
-                    ) : (
-                        <div className="project-placeholder">
-                            <span>Planning 02</span>
-                        </div>
-                    )}
-                </div>
-            </section>
-
-            {/*development*/}
-
-            <section className="project-section">
-                <div className="project-section__copy">
-                    <span className="project-detail__label">
-                        {project.development.label}
-                    </span>
-
-                    <h2 className="project-section__title">
-                        {project.development.title}
-                    </h2>
-
-                    <p className="project-section__description">
-                        {project.development.description}
-                    </p>
-
-                    <ul className="project-section__list">
-                        {project.development.details.map((detail, index) => (
-                            <li key={`${detail}-${index}`}>
-                                {detail}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div className="project-section__gallery project-section__gallery--two">
-                    <div className="project-placeholder">
-                        <span>Development 01</span>
-                    </div>
-
-                    <div className="project-placeholder">
-                        <span>Development 02</span>
-                    </div>
-                </div>
-            </section>
-
-            {/*marketing*/}
-
-            {project.marketing && (
-                <section className="project-section">
-                    <div className="project-section__copy">
-                        <span className="project-detail__label">
-                            {project.marketing.label}
+                <aside className="project-detail__sidebar">
+                    <nav
+                        className="project-detail__section-nav"
+                        aria-label="Case study sections"
+                    >
+                        <span className="project-detail__section-nav-label">
+                            Case Study
                         </span>
 
-                        <h2 className="project-section__title">
-                            {project.marketing.title}
-                        </h2>
+                        <a href="#goals">
+                            <span>01</span>
+                            Goals
+                        </a>
 
-                        <p className="project-section__description">
-                            {project.marketing.description}
-                        </p>
+                        <a href="#planning">
+                            <span>02</span>
+                            {project.planning.label}
+                        </a>
 
-                        <ul className="project-section__list">
-                            {project.marketing.details.map((detail, index) => (
-                                <li key={`${detail}-${index}`}>
-                                    {detail}
+                        <a href="#development">
+                            <span>03</span>
+                            {project.development.label}
+                        </a>
+
+                        {project.marketing && (
+                            <a href="#marketing">
+                                <span>04</span>
+                                {project.marketing.label}
+                            </a>
+                        )}
+
+                        <a href="#testing">
+                            <span>
+                                {project.marketing ? "05" : "04"}
+                            </span>
+                            {project.testing.label}
+                        </a>
+
+                        <a href="#results">
+                            <span>
+                                {project.marketing ? "06" : "05"}
+                            </span>
+                            Results
+                        </a>
+
+                        <a href="#takeaways">
+                            <span>
+                                {project.marketing ? "07" : "06"}
+                            </span>
+                            Takeaways
+                        </a>
+                    </nav>
+                </aside>
+
+                {/* case study content */}
+
+                <div className="project-detail__case-study-content">
+                    {/* goals */}
+
+                    <section
+                        id="goals"
+                        className="project-section"
+                    >
+                        <div className="project-section__copy">
+                            <span className="project-detail__label">
+                                Goals
+                            </span>
+
+                            <h2 className="project-section__title">
+                                {project.goal.title}
+                            </h2>
+
+                            <p className="project-section__description">
+                                {project.goal.description}
+                            </p>
+                        </div>
+
+                        <div className="project-section__visual">
+                            {project.goal.image ? (
+                                <img
+                                    src={project.goal.image}
+                                    alt={`${project.title} project process`}
+                                />
+                            ) : (
+                                <div className="project-placeholder">
+                                    <span>Goals / Research Image</span>
+                                </div>
+                            )}
+                        </div>
+                    </section>
+
+                    {/* planning */}
+
+                    <section
+                        id="planning"
+                        className="project-section"
+                    >
+                        <div className="project-section__copy">
+                            <span className="project-detail__label">
+                                {project.planning.label}
+                            </span>
+
+                            <h2 className="project-section__title">
+                                {project.planning.title}
+                            </h2>
+
+                            <p className="project-section__description">
+                                {project.planning.description}
+                            </p>
+                        </div>
+
+                        <div className="project-section__gallery project-section__gallery--two">
+                            {project.planning.images?.[0] ? (
+                                <img
+                                    src={project.planning.images[0]}
+                                    alt={`${project.title} website audit and research`}
+                                />
+                            ) : (
+                                <div className="project-placeholder">
+                                    <span>Research 01</span>
+                                </div>
+                            )}
+
+                            {project.planning.images?.[1] ? (
+                                <img
+                                    src={project.planning.images[1]}
+                                    alt={`${project.title} project planning`}
+                                />
+                            ) : (
+                                <div className="project-placeholder">
+                                    <span>Planning 02</span>
+                                </div>
+                            )}
+                        </div>
+                    </section>
+
+                    {/* development */}
+
+                    <section
+                        id="development"
+                        className="project-section"
+                    >
+                        <div className="project-section__copy">
+                            <span className="project-detail__label">
+                                {project.development.label}
+                            </span>
+
+                            <h2 className="project-section__title">
+                                {project.development.title}
+                            </h2>
+
+                            <p className="project-section__description">
+                                {project.development.description}
+                            </p>
+
+                            <ul className="project-section__list">
+                                {project.development.details.map(
+                                    (detail, index) => (
+                                        <li key={`${detail}-${index}`}>
+                                            {detail}
+                                        </li>
+                                    )
+                                )}
+                            </ul>
+                        </div>
+
+                        <div className="project-section__gallery project-section__gallery--two">
+                            {project.development.images?.[0] ? (
+                                <img
+                                    src={project.development.images[0]}
+                                    alt={`${project.title} desktop website layout`}
+                                />
+                            ) : (
+                                <div className="project-placeholder">
+                                    <span>Development 01</span>
+                                </div>
+                            )}
+
+                            {project.development.images?.[1] ? (
+                                <img
+                                    src={project.development.images[1]}
+                                    alt={`${project.title} mobile website layout`}
+                                />
+                            ) : (
+                                <div className="project-placeholder">
+                                    <span>Development 02</span>
+                                </div>
+                            )}
+                        </div>
+                    </section>
+
+                    {/* marketing */}
+
+                    {project.marketing && (
+                        <section
+                            id="marketing"
+                            className="project-section"
+                        >
+                            <div className="project-section__copy">
+                                <span className="project-detail__label">
+                                    {project.marketing.label}
+                                </span>
+
+                                <h2 className="project-section__title">
+                                    {project.marketing.title}
+                                </h2>
+
+                                <p className="project-section__description">
+                                    {project.marketing.description}
+                                </p>
+
+                                <ul className="project-section__list">
+                                    {project.marketing.details.map(
+                                        (detail, index) => (
+                                            <li key={`${detail}-${index}`}>
+                                                {detail}
+                                            </li>
+                                        )
+                                    )}
+                                </ul>
+                            </div>
+
+                            <div className="project-section__gallery project-section__gallery--two">
+                                {project.marketing.images?.[0] ? (
+                                    <img
+                                        src={project.marketing.images[0]}
+                                        alt={`${project.title} social media content plan`}
+                                    />
+                                ) : (
+                                    <div className="project-placeholder">
+                                        <span>Marketing 01</span>
+                                    </div>
+                                )}
+
+                                {project.marketing.images?.[1] ? (
+                                    <img
+                                        src={project.marketing.images[1]}
+                                        alt={`${project.title} Instagram profile and social media content`}
+                                    />
+                                ) : (
+                                    <div className="project-placeholder">
+                                        <span>Marketing 02</span>
+                                    </div>
+                                )}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* testing */}
+
+                    <section
+                        id="testing"
+                        className="project-section"
+                    >
+                        <div className="project-section__copy">
+                            <span className="project-detail__label">
+                                {project.testing.label}
+                            </span>
+
+                            <h2 className="project-section__title">
+                                {project.testing.title}
+                            </h2>
+
+                            <p className="project-section__description">
+                                {project.testing.description}
+                            </p>
+                        </div>
+
+                        {project.testing.image && (
+                            <div className="project-section__visual">
+                                <img
+                                    src={project.testing.image}
+                                    alt={`${project.title} testing and refinement`}
+                                />
+                            </div>
+                        )}
+                    </section>
+
+                    {/* results */}
+
+                    <section
+                        id="results"
+                        className="project-results"
+                    >
+                        <div className="project-results__heading">
+                            <span className="project-detail__label">
+                                Results
+                            </span>
+
+                            <h2 className="project-section__title">
+                                {project.resultsTitle}
+                            </h2>
+                        </div>
+
+                        <ul className="project-results__list">
+                            {project.results.map((result, index) => (
+                                <li key={`${result.label}-${index}`}>
+                                    {result.label}
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </section>
 
-                    <div className="project-section__gallery project-section__gallery--two">
-                        <div className="project-placeholder">
-                            <span>Marketing 01</span>
-                        </div>
+                    {/* takeaways */}
 
-                        <div className="project-placeholder">
-                            <span>Marketing 02</span>
-                        </div>
-                    </div>
-                </section>
-            )}
-
-            {/*testing*/}
-
-            <section className="project-section">
-                <div className="project-section__copy">
-                    <span className="project-detail__label">
-                        {project.testing.label}
-                    </span>
-
-                    <h2 className="project-section__title">
-                        {project.testing.title}
-                    </h2>
-
-                    <p className="project-section__description">
-                        {project.testing.description}
-                    </p>
-                </div>
-
-                <div className="project-section__visual">
-                    <div className="project-placeholder">
-                        <span>Testing Image</span>
-                    </div>
-                </div>
-            </section>
-
-            {/*results*/}
-
-            <section className="project-results">
-                <div className="project-results__heading">
-                    <span className="project-detail__label">
-                        Results
-                    </span>
-
-                    <h2 className="project-section__title">
-                        {project.resultsTitle}
-                    </h2>
-                </div>
-
-                <div className="project-results__grid">
-                    {project.results.map((result, index) => (
-                        <div
-                            className="project-result"
-                            key={`${result.label}-${index}`}
-                        >
-                            <span className="project-result__value">
-                                {result.value}
+                    <section
+                        id="takeaways"
+                        className="project-section"
+                    >
+                        <div className="project-section__copy">
+                            <span className="project-detail__label">
+                                Takeaways
                             </span>
 
-                            <span className="project-result__label">
-                                {result.label}
-                            </span>
+                            <h2 className="project-section__title">
+                                What I learned
+                            </h2>
+
+                            <p className="project-section__description">
+                                {project.takeaways}
+                            </p>
                         </div>
-                    ))}
+                    </section>
                 </div>
-            </section>
+            </div>
 
-            {/*takeaways*/}
-
-            <section className="project-takeaways">
-                <div>
-                    <span className="project-detail__label">
-                        Takeaways
-                    </span>
-
-                    <h2 className="project-section__title">
-                        What I learned
-                    </h2>
-                </div>
-
-                <ul className="project-takeaways__list">
-                    {project.takeaways.map((takeaway, index) => (
-                        <li key={`${takeaway}-${index}`}>
-                            {takeaway}
-                        </li>
-                    ))}
-                </ul>
-            </section>
-
-            {/*project navigation*/}
+            {/* project navigation */}
 
             <nav className="project-detail__navigation">
                 {project.previousProject ? (

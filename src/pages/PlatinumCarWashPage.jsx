@@ -3,6 +3,10 @@ import platinumCarwashHero from "../assets/images/platinum-wash-project-hero.png
 import goalsProcess from "../assets/images/goals-process.png";
 import platinumWashAudit from "../assets/images/platinum-wash-audit.png";
 import platinumWashChecklist from "../assets/images/platinum-wash-checklist.png";
+import platinumWashDevDesktop from "../assets/images/platinum-wash-dev-desktop.png";
+import platinumWashDevMobile from "../assets/images/platinum-wash-dev-mobile.png";
+import platinumWashInstagram from "../assets/images/platinum-wash-instagram.png";
+import platinumWashSocialMediaPlan from "../assets/images/platinum-wash-social-media-plan.png";
 
 const platinumCarwash = {
     number: "01",
@@ -84,6 +88,11 @@ const platinumCarwash = {
             "Created interactive features including mobile navigation and FAQ accordions.",
             "Added SEO, analytics, and click tracking to better understand how customers find and use the website.",
         ],
+
+        images: [
+            platinumWashDevDesktop,
+            platinumWashDevMobile
+        ],
     },
 
     marketing: {
@@ -102,6 +111,12 @@ const platinumCarwash = {
             "Updated and optimized the Google Business Profile.",
             "Used Google Analytics and Google Search Console to monitor performance and guide improvements.",
         ],
+
+
+        images: [
+            platinumWashSocialMediaPlan,
+            platinumWashInstagram,
+        ],
     },
 
     testing: {
@@ -119,28 +134,20 @@ const platinumCarwash = {
 
     results: [
         {
-            value: "01",
             label: "Launched a redesigned, responsive production website",
         },
         {
-            value: "02",
             label: "Created a consistent brand presence across web and social media",
         },
         {
-            value: "03",
             label: "Improved SEO and search performance tracking",
         },
         {
-            value: "04",
             label: "Continued improving the site using feedback and real user data",
         },
     ],
 
-    takeaways: [
-        "I learned how development, design, branding, SEO, and marketing can all work together as one connected experience.",
-        "Seeing real people use the site showed me how useful feedback and analytics are for deciding what to improve next.",
-        "I got to take a real project from the initial audit through design, development, launch, and continued improvements.",
-    ],
+    takeaways: "I learned how development, design, branding, SEO, and marketing can all work together as one connected experience. Seeing real people use the site also showed me how useful feedback and analytics are for deciding what to improve next. I got to take a real project from the initial audit through design, development, launch, and continued improvements.",
 
     previousProject: {
         title: "Sonic Hangman",
