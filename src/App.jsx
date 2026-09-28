@@ -8,7 +8,7 @@ import Hero from "./components/home/Hero.jsx";
 
 import SelectedWork from "./components/home/SelectedWork.jsx";
 import FlossBossPage from "./pages/FlossBossPage.jsx";
-import PlatinumCarwashPage from "./pages/PlatinumCarwashPage.jsx";
+import PlatinumCarWashPage from "./pages/PlatinumCarWashPage.jsx";
 import WatchlistMakerPage from "./pages/WatchlistMakerPage.jsx";
 import SonicHangmanPage from "./pages/SonicHangmanPage.jsx";
 
@@ -18,6 +18,10 @@ import Footer from "./components/layout/Footer.jsx";
 
 //CONFIRM FONTS THEN DOWNLOAD THEM INSTEAD OF PULLING FROM GOOGLE (EX. IN TYPOGRAPHY.CSS)
 //fix X on hamburger menu
+//FIX ABOUT SECTION SUMMARY
+//FIX RESPONSIVENESS AND STYLE OF HOME PROJECT CARDS
+//MAKE SURE ALL IMAGES ARE ROUNDED THE SAME 
+//FIX SPACING FOR EACH PROJECT CARD ON HOME PAGE AND LINES 
 //FIX SIZING FOR PROJECT CARD IMAGE AND MAKE SURE IT IS RESPONSIVE AND DOES NOT LOOK WEIRD
 //CHANGE COVER IMAGE AND DEVELOPMENT IMAGE BECAUSE THEY LOOK THE SAME (WEBSITE VIEW)
 //FIX CASE STUDY STICKY BAR ON EACH PROJECT AND MAKE SURE IT IS SPACED OUT EVENLY AND
@@ -101,7 +105,7 @@ function App() {
 
           <Route
             path="/projects/platinum-carwash"
-            element={<PlatinumCarwashPage />}
+            element={<PlatinumCarWashPage />}
           />
 
           <Route

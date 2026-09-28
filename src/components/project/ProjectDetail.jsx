@@ -32,6 +32,12 @@ function ProjectDetail({ project }) {
                             {project.summary}
                         </p>
 
+                        {project.highlight && (
+                            <p className="project-detail__highlight">
+                                {project.highlight}
+                            </p>
+                        )}
+
                         <div className="project-detail__actions">
                             {project.primaryAction && (
                                 <a
@@ -58,7 +64,14 @@ function ProjectDetail({ project }) {
                     </div>
 
                     <div className="project-detail__hero-visual">
-                        {project.heroImage ? (
+                        {project.heroVideo ? (
+                            <iframe
+                                src={project.heroVideo}
+                                title={`${project.title} project video`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        ) : project.heroImage ? (
                             <img
                                 src={project.heroImage}
                                 alt={`${project.title} project`}
@@ -185,14 +198,9 @@ function ProjectDetail({ project }) {
                 <div className="project-detail__case-study-content">
                     {/* goals */}
 
-                    <section
-                        id="goals"
-                        className="project-section"
-                    >
+                    <section id="goals" className="project-section">
                         <div className="project-section__copy">
-                            <span className="project-detail__label">
-                                Goals
-                            </span>
+                            <span className="project-detail__label">Goals</span>
 
                             <h2 className="project-section__title">
                                 {project.goal.title}
@@ -203,18 +211,24 @@ function ProjectDetail({ project }) {
                             </p>
                         </div>
 
-                        <div className="project-section__visual">
-                            {project.goal.image ? (
+                        {project.goal.images?.length > 0 ? (
+                            <div className="project-section__gallery project-section__gallery--two">
+                                {project.goal.images.map((image, index) => (
+                                    <img
+                                        key={`${image}-${index}`}
+                                        src={image}
+                                        alt={`${project.title} goals ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
+                        ) : project.goal.image ? (
+                            <div className="project-section__visual">
                                 <img
                                     src={project.goal.image}
-                                    alt={`${project.title} project process`}
+                                    alt={`${project.title} goals`}
                                 />
-                            ) : (
-                                <div className="project-placeholder">
-                                    <span>Goals / Research Image</span>
-                                </div>
-                            )}
-                        </div>
+                            </div>
+                        ) : null}
                     </section>
 
                     {/* planning */}
@@ -260,6 +274,15 @@ function ProjectDetail({ project }) {
                                 </div>
                             )}
                         </div>
+
+                        {project.planning.timelineImage && (
+                            <div className="project-section__visual">
+                                <img
+                                    src={project.planning.timelineImage}
+                                    alt={`${project.title} project timeline`}
+                                />
+                            </div>
+                        )}
                     </section>
 
                     {/* development */}
@@ -292,29 +315,28 @@ function ProjectDetail({ project }) {
                             </ul>
                         </div>
 
-                        <div className="project-section__gallery project-section__gallery--two">
-                            {project.development.images?.[0] ? (
-                                <img
-                                    src={project.development.images[0]}
-                                    alt={`${project.title} desktop website layout`}
-                                />
-                            ) : (
-                                <div className="project-placeholder">
-                                    <span>Development 01</span>
-                                </div>
-                            )}
+                        {project.development.images?.length > 0 && (
+                            <div className="project-section__gallery project-section__gallery--two">
+                                {project.development.images.map(
+                                    (image, index) => (
+                                        <img
+                                            key={`${image}-${index}`}
+                                            src={image}
+                                            alt={`${project.title} development ${index + 1}`}
+                                        />
+                                    )
+                                )}
+                            </div>
+                        )}
 
-                            {project.development.images?.[1] ? (
+                        {project.development.debugImage && (
+                            <div className="project-section__visual">
                                 <img
-                                    src={project.development.images[1]}
-                                    alt={`${project.title} mobile website layout`}
+                                    src={project.development.debugImage}
+                                    alt={`${project.title} hardware input debugging`}
                                 />
-                            ) : (
-                                <div className="project-placeholder">
-                                    <span>Development 02</span>
-                                </div>
-                            )}
-                        </div>
+                            </div>
+                        )}
                     </section>
 
                     {/* marketing */}
@@ -375,7 +397,6 @@ function ProjectDetail({ project }) {
                     )}
 
                     {/* testing */}
-
                     <section
                         id="testing"
                         className="project-section"
@@ -394,14 +415,24 @@ function ProjectDetail({ project }) {
                             </p>
                         </div>
 
-                        {project.testing.image && (
+                        {project.testing.images?.length > 0 ? (
+                            <div className="project-section__gallery project-section__gallery--two">
+                                {project.testing.images.map((image, index) => (
+                                    <img
+                                        key={`${image}-${index}`}
+                                        src={image}
+                                        alt={`${project.title} testing and refinement ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
+                        ) : project.testing.image ? (
                             <div className="project-section__visual">
                                 <img
                                     src={project.testing.image}
                                     alt={`${project.title} testing and refinement`}
                                 />
                             </div>
-                        )}
+                        ) : null}
                     </section>
 
                     {/* results */}
@@ -427,14 +458,22 @@ function ProjectDetail({ project }) {
                                 </li>
                             ))}
                         </ul>
+                        {project.resultsImages?.length > 0 && (
+                            <div className="project-section__gallery project-section__gallery--two">
+                                {project.resultsImages.map((image, index) => (
+                                    <img
+                                        key={`${image}-${index}`}
+                                        src={image}
+                                        alt={`${project.title} final result ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
+                        )}
                     </section>
 
                     {/* takeaways */}
 
-                    <section
-                        id="takeaways"
-                        className="project-section"
-                    >
+                    <section id="takeaways" className="project-section">
                         <div className="project-section__copy">
                             <span className="project-detail__label">
                                 Takeaways
@@ -448,6 +487,18 @@ function ProjectDetail({ project }) {
                                 {project.takeaways}
                             </p>
                         </div>
+
+                        {project.takeawaysImages?.length > 0 && (
+                            <div className="project-section__gallery project-section__gallery--two">
+                                {project.takeawaysImages.map((image, index) => (
+                                    <img
+                                        key={`${image}-${index}`}
+                                        src={image}
+                                        alt={`${project.title} team ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
+                        )}
                     </section>
                 </div>
             </div>

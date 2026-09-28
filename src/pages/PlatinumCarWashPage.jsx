@@ -126,7 +126,7 @@ const platinumCarwash = {
             "Testing, tracking, and improving the experience.",
 
         description:
-            "I tested the site across different devices and had friends and family with different levels of technical experience try it out. I used their feedback, along with Google Analytics and Search Console data after launch, to find issues and keep improving the site.",
+           "I tested the site across different devices and had friends and family with different levels of technical experience try it out. I used their feedback to make usability improvements, then used Google Analytics and Search Console after launch to monitor the site and identify areas for improvement.",
     },
 
     resultsTitle:

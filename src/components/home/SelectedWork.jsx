@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard.jsx";
 import platinumCarwashHero from "../../assets/images/platinum-wash-project-hero.png";
+import flossBossHero from "../../assets/images/floss-boss-project-hero.png";
 import "./SelectedWork.css";
 
 const projects = [
@@ -14,14 +15,15 @@ const projects = [
     imageAlt: "Platinum Carwash website homepage",
     link: "/projects/platinum-carwash",
   },
+
   {
     number: "02",
     title: "Floss Boss",
     category: "Alternative Controller Game",
     description:
-      "A life-size underwater dentist game built around a custom physical controller and interactive web experience.",
-    tools: "JavaScript · Arduino · Node.js · HTML Canvas",
-    image: "/images/floss-boss.jpg",
+      "A life-size underwater dental game where players use a giant toothbrush and flosser to clean a massive set of monster teeth and defeat bacteria.",
+    tools: "JavaScript · Node.js · C++ · Arduino",
+    image: flossBossHero,
     imageAlt: "Floss Boss alternative controller game",
     link: "/projects/floss-boss",
   },
