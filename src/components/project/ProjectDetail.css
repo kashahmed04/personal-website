@@ -463,6 +463,10 @@
         repeat(2, minmax(0, 1fr));
 }
 
+.project-section__gallery--wide {
+    max-width: 1900px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 
 /*case study images*/
 .project-section__visual img,

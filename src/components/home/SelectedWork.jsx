@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard.jsx";
 import platinumCarwashHero from "../../assets/images/platinum-wash-project-hero.png";
 import flossBossHero from "../../assets/images/floss-boss-project-hero.png";
+import sonicHangmanHero from "../../assets/images/sonic-hangman-project-hero.png";
 import "./SelectedWork.css";
 
 const projects = [
@@ -31,10 +32,10 @@ const projects = [
   {
     number: "03",
     title: "Watchlist Maker",
-    category: "Application Development",
+    category: "Full-Stack Application",
     description:
-      "A web application for discovering movies and shows, creating watchlists, and keeping track of what to watch next.",
-    tools: "React · JavaScript · CSS",
+      "A full-stack web application for keeping track of movies and shows through personal watchlists, ratings, and watch statuses.",
+    tools: "React · JavaScript · Node.js · MongoDB",
     image: "/images/watchlist-maker.jpg",
     imageAlt: "Watchlist Maker application",
     link: "/projects/watchlist-maker",
@@ -43,12 +44,12 @@ const projects = [
   {
     number: "04",
     title: "Sonic Hangman",
-    category: "Interactive Web Game",
+    category: "Interactive Game Development",
     description:
-      "A Sonic-inspired hangman game combining responsive interface design with interactive gameplay.",
-    tools: "TypeScript · JavaScript · CSS",
-    image: "/images/sonic-hangman.jpg",
-    imageAlt: "Sonic Hangman web game",
+      "A Sonic-themed Hangman game where players choose a category and guess their way through characters, quotes, and shows from the Sonic universe.",
+    tools: "TypeScript · Canvas · Howler.js · Vite",
+    image: sonicHangmanHero,
+    imageAlt: "Sonic Hangman game",
     link: "/projects/sonic-hangman",
   },
 ];

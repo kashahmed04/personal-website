@@ -251,29 +251,22 @@ function ProjectDetail({ project }) {
                             </p>
                         </div>
 
-                        <div className="project-section__gallery project-section__gallery--two">
-                            {project.planning.images?.[0] ? (
-                                <img
-                                    src={project.planning.images[0]}
-                                    alt={`${project.title} website audit and research`}
-                                />
-                            ) : (
-                                <div className="project-placeholder">
-                                    <span>Research 01</span>
-                                </div>
-                            )}
-
-                            {project.planning.images?.[1] ? (
-                                <img
-                                    src={project.planning.images[1]}
-                                    alt={`${project.title} project planning`}
-                                />
-                            ) : (
-                                <div className="project-placeholder">
-                                    <span>Planning 02</span>
-                                </div>
-                            )}
-                        </div>
+                        {project.planning.images?.length > 0 && (
+                            <div
+                                className={`project-section__gallery ${project.planning.images.length > 1
+                                    ? "project-section__gallery--two"
+                                    : ""
+                                    }`}
+                            >
+                                {project.planning.images.map((image, index) => (
+                                    <img
+                                        key={`${image}-${index}`}
+                                        src={image}
+                                        alt={`${project.title} ${project.planning.label.toLowerCase()} ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
+                        )}
 
                         {project.planning.timelineImage && (
                             <div className="project-section__visual">
@@ -316,7 +309,12 @@ function ProjectDetail({ project }) {
                         </div>
 
                         {project.development.images?.length > 0 && (
-                            <div className="project-section__gallery project-section__gallery--two">
+                            <div
+                                className={`project-section__gallery project-section__gallery--two ${project.development.imageLayout === "wide"
+                                        ? "project-section__gallery--wide"
+                                        : ""
+                                    }`}
+                            >
                                 {project.development.images.map(
                                     (image, index) => (
                                         <img
