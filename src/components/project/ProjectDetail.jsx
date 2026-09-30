@@ -256,6 +256,9 @@ function ProjectDetail({ project }) {
                                 className={`project-section__gallery ${project.planning.images.length > 1
                                     ? "project-section__gallery--two"
                                     : ""
+                                    } ${project.planning.imageLayout === "wide"
+                                        ? "project-section__gallery--wide"
+                                        : ""
                                     }`}
                             >
                                 {project.planning.images.map((image, index) => (
@@ -311,8 +314,8 @@ function ProjectDetail({ project }) {
                         {project.development.images?.length > 0 && (
                             <div
                                 className={`project-section__gallery project-section__gallery--two ${project.development.imageLayout === "wide"
-                                        ? "project-section__gallery--wide"
-                                        : ""
+                                    ? "project-section__gallery--wide"
+                                    : ""
                                     }`}
                             >
                                 {project.development.images.map(
@@ -414,7 +417,15 @@ function ProjectDetail({ project }) {
                         </div>
 
                         {project.testing.images?.length > 0 ? (
-                            <div className="project-section__gallery project-section__gallery--two">
+                            <div
+                                className={`project-section__gallery ${project.testing.images.length > 1
+                                        ? "project-section__gallery--two"
+                                        : ""
+                                    } ${project.testing.imageLayout === "wide"
+                                        ? "project-section__gallery--wide"
+                                        : ""
+                                    }`}
+                            >
                                 {project.testing.images.map((image, index) => (
                                     <img
                                         key={`${image}-${index}`}

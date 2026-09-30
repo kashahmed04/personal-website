@@ -1,12 +1,19 @@
 import ProjectDetail from "../components/project/ProjectDetail.jsx";
+import watchlistMakerHero from "../assets/images/watchlist-maker-project-hero.png";
+import watchlistMakerSignUp from "../assets/images/watchlist-maker-sign-up.png";
+import watchlistMakerSignIn from "../assets/images/watchlist-maker-sign-in.png";
+import watchlistMakerAddItem from "../assets/images/watchlist-maker-add-item.png";
+import watchlistMakerAddedItem from "../assets/images/watchlist-maker-added-item.png";
+import watchlistMakerPlaywright from "../assets/images/watchlist-maker-playwright.png";
 
 const watchlistMaker = {
     number: "03",
     title: "Watchlist Maker",
     subtitle: "Full-Stack Application Development",
+    heroImage: watchlistMakerHero,
 
     summary:
-        "A full-stack web application for keeping track of movies and shows through personalized watchlists, user accounts, ratings, and watch statuses.",
+        "A full-stack web application where users can create an account and manage a personal watchlist with ratings and watch statuses.",
 
     primaryAction: {
         label: "View GitHub",
@@ -16,7 +23,7 @@ const watchlistMaker = {
     secondaryAction: null,
 
     overview:
-        "A full-stack watchlist application built with React, Node.js, Express, MongoDB, Redis, and Handlebars, with user authentication, database-driven watchlists, and end-to-end testing using Playwright.",
+        "A full-stack watchlist application built with React, Node.js, Express, MongoDB, Redis, and Handlebars, with user authentication, personalized watchlists, and end-to-end testing using Playwright.",
 
     roles: [
         "Full-Stack Developer",
@@ -39,12 +46,12 @@ const watchlistMaker = {
     ],
 
     goal: {
-    title:
-        "Build a full-stack application for managing a personal watchlist.",
+        title:
+            "Build a full-stack application for managing a personal watchlist.",
 
-    description:
-        "The goal was to create an application where users could create an account and keep track of movies and shows in their own watchlist. Users can add titles, mark them as watched, watching, or want to watch, give them a rating, and remove them from their list. The application also includes a subscription system where standard users can save up to five items, while subscribed users can add more.",
-},
+        description:
+            "The goal was to create an application where users could create an account and manage their own list of movies and shows. Users can add titles, mark them as watched, watching, or want to watch, give them a rating, and remove them from their list. The application also includes a subscription system where standard users can save up to five items, while subscribed users can add more.",
+    },
 
     planning: {
         label: "Full-Stack Development",
@@ -53,9 +60,14 @@ const watchlistMaker = {
             "Connecting the interface, server, and database.",
 
         description:
-            "I built the application across both the frontend and backend. React handles interactive parts of the interface, while Node.js and Express handle routes and server-side logic. MongoDB and Mongoose store account and watchlist data, and Redis is used to store user sessions so each logged-in user can access their own watchlist.",
+            "I built the application across both the frontend and backend. React handles interactive parts of the interface, while Node.js and Express handle routes and server-side logic. MongoDB and Mongoose store account and watchlist data, and Redis stores user sessions so each logged-in user can access their own watchlist.",
 
-        images: [],
+        images: [
+            watchlistMakerSignUp,
+            watchlistMakerSignIn,
+        ],
+
+        imageLayout: "wide",
     },
 
     development: {
@@ -65,7 +77,7 @@ const watchlistMaker = {
             "Connecting user actions to account and watchlist data.",
 
         description:
-            "The application uses HTTP requests to communicate between the frontend and backend. GET requests retrieve watchlist, account, and subscription information, POST requests handle actions such as creating accounts, logging in, adding watchlist items, changing passwords, and changing subscription status, while DELETE requests remove individual watchlist items.",
+            "I connected actions in the interface to the backend so users could create accounts, log in, add items to their watchlist, manage their account, and remove saved items. Express handles the requests while MongoDB and Mongoose store each user's account and watchlist data.",
 
         details: [
             "Created GET, POST, and DELETE routes with Express",
@@ -76,7 +88,12 @@ const watchlistMaker = {
             "Stored login sessions using Redis",
         ],
 
-        images: [],
+        images: [
+            watchlistMakerAddItem,
+            watchlistMakerAddedItem,
+        ],
+
+        imageLayout: "wide",
     },
 
     testing: {
@@ -88,7 +105,9 @@ const watchlistMaker = {
         description:
             "I used Playwright to test the application from the user's perspective. The end-to-end test creates an account, changes the subscription status, adds and deletes a watchlist item, changes the account password, logs back in with the new password, and logs out to verify that the main workflow works across the frontend, server, and database.",
 
-        images: [],
+        images: [
+            watchlistMakerPlaywright,
+        ],
     },
 
     resultsTitle:
@@ -105,11 +124,11 @@ const watchlistMaker = {
         },
         {
             label:
-                "Connected frontend interactions to Express routes and MongoDB using GET, POST, and DELETE requests.",
+                "Connected the frontend to the backend using GET, POST, and DELETE requests to retrieve, add, and remove watchlist data connected to each user's account.",
         },
         {
             label:
-                "Created a Playwright end-to-end test covering the application's main account and watchlist workflow.",
+                "Created a Playwright end-to-end test that checks the application's main features from sign up through logout.",
         },
     ],
 

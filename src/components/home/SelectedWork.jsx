@@ -2,6 +2,7 @@ import ProjectCard from "./ProjectCard.jsx";
 import platinumCarwashHero from "../../assets/images/platinum-wash-project-hero.png";
 import flossBossHero from "../../assets/images/floss-boss-project-hero.png";
 import sonicHangmanHero from "../../assets/images/sonic-hangman-project-hero.png";
+import watchlistMakerHero from "../../assets/images/watchlist-maker-project-hero.png";
 import "./SelectedWork.css";
 
 const projects = [
@@ -36,7 +37,7 @@ const projects = [
     description:
       "A full-stack web application for keeping track of movies and shows through personal watchlists, ratings, and watch statuses.",
     tools: "React · JavaScript · Node.js · MongoDB",
-    image: "/images/watchlist-maker.jpg",
+    image: watchlistMakerHero,
     imageAlt: "Watchlist Maker application",
     link: "/projects/watchlist-maker",
   },
