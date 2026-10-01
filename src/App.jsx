@@ -11,6 +11,7 @@ import FlossBossPage from "./pages/FlossBossPage.jsx";
 import PlatinumCarWashPage from "./pages/PlatinumCarWashPage.jsx";
 import WatchlistMakerPage from "./pages/WatchlistMakerPage.jsx";
 import SonicHangmanPage from "./pages/SonicHangmanPage.jsx";
+import AnimeFinderPage from "./pages/AnimeFinderPage.jsx";
 
 import AboutPage from "./pages/AboutPage.jsx";
 
@@ -22,7 +23,9 @@ import Footer from "./components/layout/Footer.jsx";
 //FIX ABOUT SECTION SUMMARY
 //CHECK TO ADD STUDENT PROJECT OR ACADEMIC PROJECT OR CAPSTONE PROJECT ON PROJECT SECTIONS OR
 //LEAVE IT 
+//MAKE SURE EACH CONTENTS SECTION IS THE SAME OR SIMILAR FOR EACH PROJECT PAGE
 //MAKE GITIGNORE FOR FILES BEFORE COMMITTING
+//MAKE SURE NO "/" ON END OF LINKS FOR PROJECTS AND IN GENERAL
 //MAKE SURE IMAGES ARE BIG ENOUGH TO READ AND LAID OUT CORRECTLY (CHECK PLATINUM PAGE DEVELOPMENT)
 //CHECK IF OTHER PROJECT IMAGES SHOULD ALSO BE WIDE OR NOT (LIKE SONIC HANGMAN)
 //MAKE SURE TO ADD ALT TEXT FOR ALL IMAGES AND MAKE EVERYTHING ACCESSIBLE
@@ -133,6 +136,11 @@ function App() {
           <Route
             path="/projects/sonic-hangman"
             element={<SonicHangmanPage />}
+          />
+
+          <Route
+            path="/projects/anime-finder"
+            element={<AnimeFinderPage />}
           />
 
           <Route

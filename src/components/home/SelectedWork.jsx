@@ -3,6 +3,7 @@ import platinumCarwashHero from "../../assets/images/platinum-wash-project-hero.
 import flossBossHero from "../../assets/images/floss-boss-project-hero.png";
 import sonicHangmanHero from "../../assets/images/sonic-hangman-project-hero.png";
 import watchlistMakerHero from "../../assets/images/watchlist-maker-project-hero.png";
+import animeFinderHero from "../../assets/images/anime-finder-project-hero.png";
 import "./SelectedWork.css";
 
 const projects = [
@@ -52,6 +53,18 @@ const projects = [
     image: sonicHangmanHero,
     imageAlt: "Sonic Hangman game",
     link: "/projects/sonic-hangman",
+  },
+
+  {
+    number: "05",
+    title: "Anime Finder",
+    category: "API Web Application",
+    description:
+      "A responsive web application that uses the Jikan API to search for anime, generate a random anime, and display anime information.",
+    tools: "TypeScript · Jikan API · Fetch API · Vite",
+    image: animeFinderHero,
+    imageAlt: "Anime Finder search results",
+    link: "/projects/anime-finder",
   },
 ];
 
