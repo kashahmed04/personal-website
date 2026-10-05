@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import DistortField from "./DistortField";
 import "./Hero.css";
 
+//words that cycle through the hero statement
 const words = [
   "Websites.",
   "Interfaces.",
@@ -14,6 +15,7 @@ function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
   const [isChanging, setIsChanging] = useState(false);
 
+  //cycle through the hero words at a set interval
   useEffect(() => {
     const interval = setInterval(() => {
       setIsChanging(true);

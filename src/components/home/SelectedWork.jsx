@@ -6,13 +6,14 @@ import watchlistMakerHero from "../../assets/images/watchlist-maker-project-hero
 import animeFinderHero from "../../assets/images/anime-finder-project-hero.png";
 import "./SelectedWork.css";
 
+//project data displayed in the selected work section
 const projects = [
   {
     number: "01",
     title: "Platinum Carwash",
     category: "Web Design & Development",
     description:
-      "A website and digital presence redesign for a local car wash, combining UI/UX, branding, SEO, and social media.",
+      "A full digital redesign for a local car wash, combining web development, UI/UX, branding, SEO, and social media.",
     tools: "HTML · CSS · JavaScript · Google Analytics",
     image: platinumCarwashHero,
     imageAlt: "Platinum Carwash website homepage",

@@ -1,7 +1,6 @@
-/*bring our three global CSS files into one place*/
+/*bring our global CSS files into one place*/
 @import "./styles/variables.css";
 @import "./styles/typography.css";
-@import "./styles/animations.css";
 
 *,
 *::before,

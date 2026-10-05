@@ -6,11 +6,13 @@ import watchlistMakerAddItem from "../assets/images/watchlist-maker-add-item.png
 import watchlistMakerAddedItem from "../assets/images/watchlist-maker-added-item.png";
 import watchlistMakerPlaywright from "../assets/images/watchlist-maker-playwright.png";
 
+//watchlist maker project content and case study data
 const watchlistMaker = {
     number: "03",
     title: "Watchlist Maker",
     subtitle: "Full-Stack Application Development",
     heroImage: watchlistMakerHero,
+    pageClass: "watchlist-maker",
 
     summary:
         "A full-stack web application where users can create an account and manage a personal watchlist with ratings and watch statuses.",
@@ -135,6 +137,7 @@ const watchlistMaker = {
     takeaways:
         "Watchlist Maker gave me experience building across multiple parts of a full-stack application instead of focusing only on the frontend. I learned how the interface, HTTP requests, Express routes, authentication, sessions, and MongoDB work together to manage data for individual users. It also gave me experience using end-to-end testing to make sure a complete user workflow worked across the application.",
 
+    //previous and next project navigation
     previousProject: {
         title: "Floss Boss",
         href: "/projects/floss-boss",

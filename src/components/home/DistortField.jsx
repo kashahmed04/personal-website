@@ -13,6 +13,7 @@ function DistortField() {
 
     if (!container) return;
 
+    //set up the Three.js scene, camera, and renderer
     const scene = new THREE.Scene();
 
     const camera = new THREE.OrthographicCamera(
@@ -39,6 +40,7 @@ function DistortField() {
 
     container.appendChild(renderer.domElement);
 
+    //create the curved lines that make up the distortion field
     const LINE_COUNT = 24;
     const POINT_COUNT = 22;
 
@@ -153,6 +155,7 @@ function DistortField() {
       });
     }
 
+    //resize the field and line positions to match the container
     function resize() {
       const width =
         container.clientWidth;
@@ -227,7 +230,7 @@ function DistortField() {
             point.z,
           ])
         );
-        
+
         line.material.resolution.set(
           width,
           height
@@ -237,6 +240,7 @@ function DistortField() {
 
     resize();
 
+    //watch for container size changes and update the field
     const resizeObserver =
       new ResizeObserver(resize);
 
@@ -244,14 +248,17 @@ function DistortField() {
       container
     );
 
-    const clock =
-      new THREE.Clock();
+    const timer =
+      new THREE.Timer();
 
     let frameId;
 
+    //animate subtle wave movement across the lines
     function animate() {
+      timer.update();
+
       const time =
-        clock.getElapsedTime();
+        timer.getElapsed();
 
       lines.forEach(
         (lineData) => {
@@ -268,7 +275,7 @@ function DistortField() {
             (point, pointIndex) => {
               const base =
                 basePoints[
-                  pointIndex
+                pointIndex
                 ];
 
               const progress =
@@ -346,6 +353,7 @@ function DistortField() {
 
     animate();
 
+    //clean up resources when the component is removed
     return () => {
       cancelAnimationFrame(
         frameId

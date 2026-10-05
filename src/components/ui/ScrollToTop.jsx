@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 function ScrollToTop() {
   const location = useLocation();
 
+  //scroll to the top when navigating to a page without a URL hash
   useEffect(() => {
     if (!location.hash) {
       window.scrollTo({

@@ -14,6 +14,7 @@ function Navbar() {
     setMenuOpen(false);
   }
 
+  //track the current page to highlight the active navigation link
   const isHome =
     location.pathname === "/" &&
     location.hash !== "#selected-work";
@@ -24,9 +25,6 @@ function Navbar() {
 
   const isAbout =
     location.pathname === "/about";
-
-  const isResume =
-    location.pathname === "/resume";
 
   return (
     <header className="navbar">
@@ -39,6 +37,7 @@ function Navbar() {
         KA<span>.</span>
       </Link>
 
+      {/*mobile navigation toggle */}
       <button
         className={`navbar__toggle ${menuOpen ? "navbar__toggle--open" : ""
           }`}
@@ -84,14 +83,15 @@ function Navbar() {
           About
         </Link>
 
-        <Link
-          to="/resume"
-          className={`navbar__link ${isResume ? "navbar__link--active" : ""
-            }`}
+        <a
+          href="/k-ahmed-resume.pdf"
+          className="navbar__link"
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={closeMenu}
         >
           Resume
-        </Link>
+        </a>
       </nav>
     </header>
   );

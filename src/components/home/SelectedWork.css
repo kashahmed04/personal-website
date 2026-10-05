@@ -2,9 +2,7 @@
   width: 100%;
 
   padding:
-    clamp(5rem, 8vw, 8rem)
-    var(--page-padding)
-    0;
+    clamp(5rem, 8vw, 8rem) var(--page-padding) 0;
 
   background: var(--color-bg);
 
@@ -62,5 +60,28 @@
 @media (max-width: 430px) {
   .selected-work {
     padding-top: 3.5rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .selected-work__projects {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .selected-work__projects .project-card {
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .selected-work__projects .project-card+.project-card {
+    margin-top: 4rem;
+    padding-top: 2rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .selected-work__projects .project-card:last-child {
+    margin-bottom: 3rem;
   }
 }

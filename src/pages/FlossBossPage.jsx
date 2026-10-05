@@ -20,6 +20,7 @@ import flossBossGDCFour from "../assets/images/flossing-gdc-two.jpg";
 import flossBossTakeaways from "../assets/images/floss-boss-takeaways.JPEG";
 import flossBossTakeawaysTwo from "../assets/images/floss-boss-takeaways-two.jpg";
 
+//floss boss project content and case study data
 const flossBoss = {
     number: "02",
 
@@ -169,9 +170,6 @@ const flossBoss = {
             "Worked with the other developers to debug communication between the physical and digital parts of the experience.",
         ],
 
-        images: [
-            // architecture / code / game photos here
-        ],
     },
 
     testing: {
@@ -229,6 +227,7 @@ const flossBoss = {
         flossBossTakeaways,
     ],
 
+    //previous and next project navigation
     previousProject: {
         title: "Platinum Carwash",
         href: "/projects/platinum-carwash",

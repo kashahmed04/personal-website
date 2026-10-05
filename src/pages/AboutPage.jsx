@@ -6,6 +6,7 @@ import "./AboutPage.css";
 function AboutPage() {
   return (
     <main className="about-page">
+      {/*about me*/}
       <section className="about-section about-intro">
         <div className="about-section__heading">
           <span className="about-section__number">01</span>
@@ -33,7 +34,8 @@ function AboutPage() {
             <div className="about-intro__accent"></div>
 
             <p className="text-body">
-              I like bringing different parts of art and technology together to
+              I like bringing different parts of art
+              and technology together to
               create digital experiences, whether I'm designing, coding, or
               experimenting with something new.
             </p>
@@ -45,6 +47,7 @@ function AboutPage() {
         </div>
       </section>
 
+      {/*experience*/}
       <section className="about-section about-experience">
         <div className="about-section__heading">
           <span className="about-section__number">02</span>
@@ -84,10 +87,44 @@ function AboutPage() {
           </div>
         </div>
       </section>
-
-      <section className="about-section about-skills">
+    
+      {/*education*/}
+      <section className="about-section about-education">
         <div className="about-section__heading">
           <span className="about-section__number">03</span>
+
+          <span className="about-section__label text-label">
+            Education
+          </span>
+        </div>
+
+        <div className="about-education__content">
+          <div className="about-education__school">
+            <h2 className="about-education__title">
+              Rochester Institute of Technology
+            </h2>
+
+            <p className="about-education__degree">
+              B.S. New Media Interactive Development
+            </p>
+          </div>
+
+          <p className="about-education__date">
+            2022 - 2026
+          </p>
+
+          <div className="about-education__details">
+            <p className="text-body">
+              Minor in Communication
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/*skills*/}
+      <section className="about-section about-skills">
+        <div className="about-section__heading">
+          <span className="about-section__number">04</span>
 
           <span className="about-section__label text-label">
             Skills
@@ -168,6 +205,7 @@ function AboutPage() {
               <li>Arduino</li>
               <li>Arduino IDE</li>
               <li>npm</li>
+              <li>Vite</li>
               <li>Heroku</li>
               <li>Android Studio</li>
               <li>Playwright</li>
@@ -181,9 +219,10 @@ function AboutPage() {
         </div>
       </section>
 
+      {/*personal interests*/}
       <section className="about-section about-personal">
         <div className="about-section__heading">
-          <span className="about-section__number">04</span>
+          <span className="about-section__number">05</span>
 
           <span className="about-section__label text-label">
             A Little More About Me

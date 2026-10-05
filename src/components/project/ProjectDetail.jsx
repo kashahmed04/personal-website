@@ -3,8 +3,10 @@ import "./ProjectDetail.css";
 
 function ProjectDetail({ project }) {
     return (
-        <article className="project-detail">
-            {/* project hero */}
+        <article
+            className={`project-detail ${project.pageClass || ""}`}
+        >
+            {/*project hero*/}
 
             <section className="project-detail__hero">
                 <Link
@@ -85,7 +87,7 @@ function ProjectDetail({ project }) {
                 </div>
             </section>
 
-            {/* project meta */}
+            {/*project meta*/}
 
             <section className="project-detail__meta">
                 <div className="project-detail__meta-item project-detail__meta-item--overview">
@@ -134,10 +136,10 @@ function ProjectDetail({ project }) {
                 </div>
             </section>
 
-            {/* case study layout */}
+            {/*case study layout*/}
 
             <div className="project-detail__case-study">
-                {/* sidebar */}
+                {/* sidebar*/}
 
                 <aside className="project-detail__sidebar">
                     <nav
@@ -193,10 +195,10 @@ function ProjectDetail({ project }) {
                     </nav>
                 </aside>
 
-                {/* case study content */}
+                {/*case study content*/}
 
                 <div className="project-detail__case-study-content">
-                    {/* goals */}
+                    {/*goals*/}
 
                     <section id="goals" className="project-section">
                         <div className="project-section__copy">
@@ -231,7 +233,7 @@ function ProjectDetail({ project }) {
                         ) : null}
                     </section>
 
-                    {/* planning */}
+                    {/*planning*/}
 
                     <section
                         id="planning"
@@ -281,7 +283,7 @@ function ProjectDetail({ project }) {
                         )}
                     </section>
 
-                    {/* development */}
+                    {/*development*/}
 
                     <section
                         id="development"
@@ -313,9 +315,12 @@ function ProjectDetail({ project }) {
 
                         {project.development.images?.length > 0 && (
                             <div
-                                className={`project-section__gallery project-section__gallery--two ${project.development.imageLayout === "wide"
-                                    ? "project-section__gallery--wide"
+                                className={`project-section__gallery ${project.development.images.length > 1
+                                    ? "project-section__gallery--two"
                                     : ""
+                                    } ${project.development.imageLayout === "wide"
+                                        ? "project-section__gallery--wide"
+                                        : ""
                                     }`}
                             >
                                 {project.development.images.map(
@@ -340,7 +345,7 @@ function ProjectDetail({ project }) {
                         )}
                     </section>
 
-                    {/* marketing */}
+                    {/*marketing*/}
 
                     {project.marketing && (
                         <section
@@ -397,7 +402,7 @@ function ProjectDetail({ project }) {
                         </section>
                     )}
 
-                    {/* testing */}
+                    {/*testing*/}
                     <section
                         id="testing"
                         className="project-section"
@@ -419,8 +424,8 @@ function ProjectDetail({ project }) {
                         {project.testing.images?.length > 0 ? (
                             <div
                                 className={`project-section__gallery ${project.testing.images.length > 1
-                                        ? "project-section__gallery--two"
-                                        : ""
+                                    ? "project-section__gallery--two"
+                                    : ""
                                     } ${project.testing.imageLayout === "wide"
                                         ? "project-section__gallery--wide"
                                         : ""
@@ -444,7 +449,7 @@ function ProjectDetail({ project }) {
                         ) : null}
                     </section>
 
-                    {/* results */}
+                    {/*results*/}
 
                     <section
                         id="results"
@@ -480,7 +485,7 @@ function ProjectDetail({ project }) {
                         )}
                     </section>
 
-                    {/* takeaways */}
+                    {/*takeaways*/}
 
                     <section id="takeaways" className="project-section">
                         <div className="project-section__copy">
@@ -512,7 +517,7 @@ function ProjectDetail({ project }) {
                 </div>
             </div>
 
-            {/* project navigation */}
+            {/*project navigation*/}
 
             <nav className="project-detail__navigation">
                 {project.previousProject ? (

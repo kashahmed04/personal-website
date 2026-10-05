@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 function ScrollToHash() {
   const location = useLocation();
 
+  //scroll to the section specified in the URL hash
   useEffect(() => {
     if (!location.hash) {
       return;

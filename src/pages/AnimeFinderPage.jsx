@@ -1,7 +1,9 @@
 
 import ProjectDetail from "../components/project/ProjectDetail.jsx";
 import animeFinderHero from "../assets/images/anime-finder-project-hero.png";
+import animeFinderSearchResults from "../assets/images/anime-finder-cards.png";
 
+//anime finder project content and case study data
 const animeFinder = {
     number: "05",
     title: "Anime Finder",
@@ -70,6 +72,11 @@ const animeFinder = {
             "Added a feature to generate one random anime at a time and a button to clear results",
             "Handled empty searches, missing data, and API errors",
         ],
+
+        images: [
+            animeFinderSearchResults,
+        ],
+
     },
 
     testing: {
@@ -105,14 +112,18 @@ const animeFinder = {
     ],
 
     takeaways:
-        "Anime Finder gave me more experience working with TypeScript and integrating a third-party API into a web application. I learned more about making asynchronous requests, working with JSON responses, and updating the interface based on the data returned. It also showed me why handling missing information and API failures is important when an application depends on an external service.",
+        "Anime Finder gave me more experience working with TypeScript and integrating a third-party API into a web application. I learned more about fetching data from an API, working with JSON responses, and updating the interface based on the data returned. It also gave me experience turning external data into a responsive, interactive experience for users.",
 
+    //previous and next project navigation
     previousProject: {
         title: "Sonic Hangman",
         href: "/projects/sonic-hangman",
     },
 
-    nextProject: null,
+    nextProject: {
+        title: "Platinum Carwash",
+        href: "/projects/platinum-carwash",
+    },
 };
 
 function AnimeFinderPage() {

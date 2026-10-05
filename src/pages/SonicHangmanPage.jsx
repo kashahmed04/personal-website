@@ -6,6 +6,7 @@ import sonicHangmanLosingScreen from "../assets/images/sonic-hangman-losing-scre
 import sonicHangmanMobile from "../assets/images/sonic-hangman-mobile.png";
 import sonicHangmanTablet from "../assets/images/sonic-hangman-tablet.png";
 
+//sonic hangman project content and case study data
 const sonicHangman = {
     number: "04",
     title: "Sonic Hangman",
@@ -131,12 +132,16 @@ const sonicHangman = {
     takeaways:
         "Sonic Hangman gave me more experience building something interactive where a lot of different pieces had to respond to what the player was doing. I got more comfortable using TypeScript for game logic, working with Canvas to draw and update visuals, saving data with local storage, and adding audio with Howler.js. It also helped me think more about how smaller interactions can come together to make a browser game feel like a complete experience.",
 
+    //previous and next project navigation
     previousProject: {
         title: "Watchlist Maker",
         href: "/projects/watchlist-maker",
     },
 
-    nextProject: null,
+    nextProject: {
+        title: "Anime Finder",
+        href: "/projects/anime-finder",
+    },
 };
 
 function SonicHangmanPage() {

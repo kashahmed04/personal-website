@@ -8,6 +8,7 @@ import platinumWashDevMobile from "../assets/images/platinum-wash-dev-mobile.png
 import platinumWashInstagram from "../assets/images/platinum-wash-instagram.png";
 import platinumWashSocialMediaPlan from "../assets/images/platinum-wash-social-media-plan.png";
 
+//platinum carwash project content and case study data
 const platinumCarwash = {
     number: "01",
     title: "Platinum Carwash",
@@ -93,6 +94,8 @@ const platinumCarwash = {
             platinumWashDevDesktop,
             platinumWashDevMobile
         ],
+
+        imageLayout: "wide"
     },
 
     marketing: {
@@ -126,7 +129,7 @@ const platinumCarwash = {
             "Testing, tracking, and improving the experience.",
 
         description:
-           "I tested the site across different devices and had friends and family with different levels of technical experience try it out. I used their feedback to make usability improvements, then used Google Analytics and Search Console after launch to monitor the site and identify areas for improvement.",
+            "I tested the site across different devices and had friends and family with different levels of technical experience try it out. I used their feedback to make usability improvements, then used Google Analytics and Search Console after launch to monitor the site and identify areas for improvement.",
     },
 
     resultsTitle:
@@ -149,9 +152,10 @@ const platinumCarwash = {
 
     takeaways: "I learned how development, design, branding, SEO, and marketing can all work together as one connected experience. Seeing real people use the site also showed me how useful feedback and analytics are for deciding what to improve next. I got to take a real project from the initial audit through design, development, launch, and continued improvements.",
 
+    //previous and next project navigation
     previousProject: {
-        title: "Sonic Hangman",
-        href: "/projects/sonic-hangman",
+        title: "Anime Finder",
+        href: "/projects/anime-finder",
     },
 
     nextProject: {
