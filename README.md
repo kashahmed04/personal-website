@@ -1,16 +1,30 @@
-# React + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio showcasing projects across front-end development, UI/UX design, and interactive media.
 
-Currently, two official plugins are available:
+The site features selected projects with detailed case studies covering the design and development process, including planning, development, testing, results, and takeaways.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Featured Projects
 
-## React Compiler
+- **Platinum Carwash** — Responsive website designed and developed for a local car wash
+- **Floss Boss** — Life-size alternative controller game using custom Arduino hardware
+- **Watchlist Maker** — Full-stack watchlist application
+- **Sonic Hangman** — TypeScript browser game inspired by classic Hangman
+- **Anime Finder** — TypeScript web application using the Jikan API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built With
 
-## Expanding the ESLint configuration
+- React
+- JavaScript
+- HTML
+- CSS
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Responsive design across desktop, tablet, and mobile
+- Individual case studies for each featured project
+- Reusable React components
+- Project navigation between case studies
+- Custom responsive layouts and typography
+- Accessible navigation and interactive elements
