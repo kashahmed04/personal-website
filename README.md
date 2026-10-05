@@ -6,11 +6,11 @@ The site features selected projects with detailed case studies covering the desi
 
 ## Featured Projects
 
-- **Platinum Carwash** — Responsive website designed and developed for a local car wash
-- **Floss Boss** — Life-size alternative controller game using custom Arduino hardware
-- **Watchlist Maker** — Full-stack watchlist application
-- **Sonic Hangman** — TypeScript browser game inspired by classic Hangman
-- **Anime Finder** — TypeScript web application using the Jikan API
+- **Platinum Carwash** - Responsive website designed and developed for a local car wash
+- **Floss Boss** - Life-size alternative controller game using custom Arduino hardware
+- **Watchlist Maker** - Full-stack watchlist application
+- **Sonic Hangman** - TypeScript browser game inspired by classic Hangman
+- **Anime Finder** - TypeScript web application using the Jikan API
 
 ## Built With
 
