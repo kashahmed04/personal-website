@@ -2,6 +2,8 @@
 
 My personal portfolio showcasing projects across front-end development, UI/UX design, and interactive media.
 
+**Live Site:** [kashahmed04.github.io/personal-website](https://kashahmed04.github.io/personal-website/)
+
 The site features selected projects with detailed case studies covering the design and development process, including planning, development, testing, results, and takeaways.
 
 ## Featured Projects
