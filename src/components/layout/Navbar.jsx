@@ -84,7 +84,7 @@ function Navbar() {
         </Link>
 
         <a
-          href="/k-ahmed-resume.pdf"
+          href={`${import.meta.env.BASE_URL}k-ahmed-resume.pdf`}
           className="navbar__link"
           target="_blank"
           rel="noopener noreferrer"

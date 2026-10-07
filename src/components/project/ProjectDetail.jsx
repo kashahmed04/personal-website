@@ -13,7 +13,22 @@ function ProjectDetail({ project }) {
                     to="/#selected-work"
                     className="project-detail__back"
                 >
-                    ← Back to Projects
+                    <svg
+                        className="project-detail__arrow"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M19 12H5M11 6l-6 6 6 6"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+
+                    Back to Projects
                 </Link>
 
                 <div className="project-detail__hero-layout">
@@ -48,7 +63,22 @@ function ProjectDetail({ project }) {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    {project.primaryAction.label} ↗
+                                    {project.primaryAction.label}
+
+                                    <svg
+                                        className="project-detail__arrow project-detail__arrow--external"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M7 17L17 7M9 7h8v8"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
                                 </a>
                             )}
 
@@ -59,7 +89,22 @@ function ProjectDetail({ project }) {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    {project.secondaryAction.label} ↗
+                                    {project.secondaryAction.label}
+
+                                    <svg
+                                        className="project-detail__arrow project-detail__arrow--external"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M7 17L17 7M9 7h8v8"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
                                 </a>
                             )}
                         </div>
@@ -525,7 +570,24 @@ function ProjectDetail({ project }) {
                         to={project.previousProject.href}
                         className="project-detail__previous"
                     >
-                        <span>← Previous Project</span>
+                        <span>
+                            <svg
+                                className="project-detail__arrow"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M19 12H5M11 6l-6 6 6 6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+
+                            Previous Project
+                        </span>
                         <strong>{project.previousProject.title}</strong>
                     </Link>
                 ) : (
@@ -542,7 +604,24 @@ function ProjectDetail({ project }) {
                         to={project.nextProject.href}
                         className="project-detail__next"
                     >
-                        <span>Next Project →</span>
+                        <span>
+                            Next Project
+
+                            <svg
+                                className="project-detail__arrow"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M5 12h14M13 6l6 6-6 6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        </span>
                         <strong>{project.nextProject.title}</strong>
                     </Link>
                 ) : (

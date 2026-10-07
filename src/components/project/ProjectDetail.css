@@ -570,6 +570,29 @@
     line-height: 1.5;
 }
 
+.project-detail__arrow {
+    width: 1rem;
+    height: 1rem;
+
+    flex-shrink: 0;
+}
+
+.project-detail__back {
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.project-detail__button {
+    gap: 0.4rem;
+}
+
+.project-detail__previous>span,
+.project-detail__next>span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 
 /*large/medium desktop*/
 @media (max-width: 1600px) {
@@ -799,8 +822,13 @@
     .project-detail__navigation strong {
         font-size: 0.9rem;
     }
-}
 
+    .project-detail__previous .project-detail__arrow,
+    .project-detail__next .project-detail__arrow {
+        width: 1rem;
+        height: 1rem;
+    }
+}
 
 /*small mobile*/
 @media (max-width: 400px) {

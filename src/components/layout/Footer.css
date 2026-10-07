@@ -156,6 +156,12 @@
   text-transform: lowercase;
 }
 
+.footer__icon--email {
+  height: 1.3rem;
+
+  color: var(--color-accent);
+}
+
 .footer__meta {
   min-width: 0;
 
@@ -197,8 +203,13 @@
     transform var(--transition-fast);
 }
 
-.footer__source span {
+.footer__source-arrow {
+  width: 1.2rem;
+  height: 1.2rem;
+
   color: var(--color-accent);
+
+  flex-shrink: 0;
 }
 
 .footer__source:hover,

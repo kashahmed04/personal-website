@@ -316,7 +316,9 @@
 
   margin-top: 1rem;
 
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 
   color: var(--color-accent);
 
@@ -334,6 +336,13 @@
   text-transform: uppercase;
 
   transition: color var(--transition-fast);
+}
+
+.about-experience__arrow {
+  width: 1.1rem;
+  height: 1.1rem;
+
+  flex-shrink: 0;
 }
 
 .about-experience__link:hover,
@@ -446,25 +455,8 @@
   border-right: 0;
 }
 
-.about-skills__icon {
-  display: block;
-
-  color: var(--color-accent);
-
-  font-family:
-    "Inter",
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 1.2rem;
-  font-weight: 700;
-
-  line-height: 1;
-}
-
 .about-skills__title {
-  margin-top: 0.8rem;
+  margin-top: 0rem;
 
   color: var(--color-text);
 

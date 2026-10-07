@@ -82,12 +82,27 @@ function AboutPage() {
               to="/projects/platinum-carwash"
               className="about-experience__link"
             >
-              View Project ↗
+              View Project
+
+              <svg
+                className="about-experience__arrow"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 17L17 7M9 7h8v8"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </Link>
           </div>
         </div>
       </section>
-    
+
       {/*education*/}
       <section className="about-section about-education">
         <div className="about-section__heading">
@@ -133,10 +148,6 @@ function AboutPage() {
 
         <div className="about-skills__grid">
           <div className="about-skills__group">
-            <span className="about-skills__icon" aria-hidden="true">
-              /
-            </span>
-
             <h2 className="about-skills__title">
               Development
             </h2>
@@ -166,10 +177,6 @@ function AboutPage() {
           </div>
 
           <div className="about-skills__group">
-            <span className="about-skills__icon" aria-hidden="true">
-              ✎
-            </span>
-
             <h2 className="about-skills__title">
               Design
             </h2>
@@ -191,10 +198,6 @@ function AboutPage() {
           </div>
 
           <div className="about-skills__group">
-            <span className="about-skills__icon" aria-hidden="true">
-              ⚙
-            </span>
-
             <h2 className="about-skills__title">
               Tools & Technology
             </h2>

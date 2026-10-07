@@ -33,12 +33,30 @@ function Footer() {
           href="mailto:kash.ahmed84@gmail.com"
           className="footer__contact-link"
         >
-          <span
-            className="footer__icon"
+          <svg
+            className="footer__icon footer__icon--email"
+            viewBox="0 0 24 24"
             aria-hidden="true"
           >
-            ✉
-          </span>
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
+            <path
+              d="M4 7l8 6 8-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
 
           <span>Email</span>
         </a>
@@ -52,7 +70,21 @@ function Footer() {
           rel="noreferrer"
         >
           Portfolio Source
-          <span aria-hidden="true">↗</span>
+
+          <svg
+            className="footer__source-arrow"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M7 17L17 7M9 7h8v8"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </a>
 
         <p className="footer__copyright">
