@@ -314,11 +314,18 @@
   }
 
   .footer__source {
+    position: relative;
+
     width: fit-content;
 
     justify-content: center;
 
     text-align: center;
+  }
+
+  .footer__source-arrow {
+    position: absolute;
+    left: calc(100% + 0.5rem);
   }
 
   .footer__copyright {
