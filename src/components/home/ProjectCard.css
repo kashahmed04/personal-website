@@ -110,7 +110,9 @@
 
     margin-top: 2rem;
 
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
 
     color: var(--color-text);
 
@@ -126,9 +128,16 @@
         transform var(--transition-fast);
 }
 
+.project-card__arrow {
+    width: 1em;
+    height: 1em;
+
+    flex-shrink: 0;
+}
+
 .project-card__tools,
 .project-card__link {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 .project-card:hover .project-card__link,
