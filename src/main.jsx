@@ -5,6 +5,20 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 
+const redirect = sessionStorage.getItem("redirect");
+
+if (redirect) {
+  sessionStorage.removeItem("redirect");
+
+  const base = "/personal-website";
+
+  const route = redirect.startsWith(base)
+    ? redirect.slice(base.length)
+    : redirect;
+
+  window.history.replaceState(null, "", base + (route || "/"));
+}
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter basename="/personal-website">
